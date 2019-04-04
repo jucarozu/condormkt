@@ -1,5 +1,5 @@
-# CondorMKT
-A little web app for create your own MarketPlace (like Amazon).
+# CondorMKT - API Server
+A little web app for create your own MarketPlace (like Amazon) - API Server.
 
 ## Requirements
 
@@ -26,7 +26,6 @@ https://documenter.getpostman.com/view/2735177/S1EH4hVc
 
 ### Database
 
-* MongoDB
 * MongoDB Atlas
 
 ## Dependencies
