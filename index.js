@@ -8,11 +8,8 @@ const mongoose = require('mongoose');
 // Create an Express app
 const app = express();
 
-// Server port
-const { PORT, SECRET_KEY } = require('./config');
-
-// Database URI
-const { DB } = require('./config');
+// Server port / Database URI / Secret key
+const { PORT, DB, SECRET_KEY } = require('./config');
 
 // Database connection
 mongoose.connect(DB, { useNewUrlParser: true })
@@ -28,7 +25,6 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Set up cart sessions
@@ -44,11 +40,6 @@ app.use(session({
 app.use('/api', require('./routes/CategoryRoute'));
 app.use('/api', require('./routes/ProductRoute'));
 app.use('/api', require('./routes/CartRoute'));
-
-// Handles any requests that don't match the ones above
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build/index.html'));
-});
 
 // Starting the server
 app.listen(PORT, () => {
