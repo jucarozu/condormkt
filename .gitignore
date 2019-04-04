@@ -8,6 +8,3 @@
 
 # images
 /public/images
-
-#client
-/client/node_modules
