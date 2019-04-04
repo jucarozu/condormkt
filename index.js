@@ -36,6 +36,16 @@ app.use(session({
   store: new MongoStore({ mongooseConnection: mongoose.connection, ttl: 60 * 60 * 24 * 7 })
 }));
 
+// HTTP headers
+app.use((req, res, next) => {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+	res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+	res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+
+	next();
+});
+
 // Routes
 app.use('/api', require('./routes/CategoryRoute'));
 app.use('/api', require('./routes/ProductRoute'));
