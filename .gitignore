@@ -1,0 +1,13 @@
+# dependencies
+/node_modules
+
+# mocks
+/mockCategories.json
+/mockProducts.json
+/mongoimport.txt
+
+# images
+/public/images
+
+#client
+/client/node_modules

@@ -1,0 +1,23 @@
+{
+  "name": "condormkt-backend",
+  "version": "1.0.0",
+  "description": "A little web app for create your own MarketPlace (like Amazon)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "author": "Juan Camilo Rojas",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongo": "^2.0.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.4.20",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
