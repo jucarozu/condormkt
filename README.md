@@ -1,6 +1,11 @@
 # CondorMKT
 A little web app for create your own MarketPlace (like Amazon).
 
+## Requirements
+
+* Node.js
+* npm
+
 ## Installation
 
 ### Backend
