@@ -8,14 +8,14 @@ A little web app for create your own MarketPlace (like Amazon) - API Server.
 
 ## Instructions
 
-## Option 1: Local environment
+### Option 1: Local environment
 
 1. npm install
 2. npm start
 
 * Default port: 5000
 
-## Option 2: Online environment
+### Option 2: Online environment
 
 https://condormkt.herokuapp.com/
 
