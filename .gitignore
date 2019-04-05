@@ -8,3 +8,6 @@
 
 # client
 /client
+
+# sessionid
+sessionid-cookies.txt
