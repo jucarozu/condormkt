@@ -38,7 +38,7 @@ app.use(session({
 
 // HTTP headers
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://condormkt-app.herokuapp.com'); // Allow requests from client app (Heroku)
+  res.header('Access-Control-Allow-Origin', '*'); // Allow requests from client app
   res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
