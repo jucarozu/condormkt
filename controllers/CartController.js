@@ -17,7 +17,7 @@ function index(req, res) {
 
 // HTTP Method: POST
 // Route: /api/cart/
-// Description: Add cart session.
+// Description: Add/update/remove/clean cart session.
 function create(req, res) {
   // If request body doesn't send, clean cart and destroy session.
   if (req.body === []) {
@@ -29,7 +29,7 @@ function create(req, res) {
     })  
   }
 
-  // Create or replace the cart session with request body.
+  // Set or replace the cart session with request body.
   req.session.cart = req.body;
 
   // Save cart in session.
