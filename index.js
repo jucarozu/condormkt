@@ -13,7 +13,7 @@ const { PORT, DB, SECRET_KEY } = require('./config');
 
 // Database connection
 mongoose.connect(DB, { useNewUrlParser: true })
-  .then(() => console.log('Database is connected!'))
+  .then(() => console.log('Database is connected'))
   .catch(error => console.log(error));
 
 // Database sessions
