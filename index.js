@@ -31,7 +31,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: SECRET_KEY,
   saveUninitialized: false,
-  proxy: true,
   resave: false,
   cookie: { maxAge: 1000 * 60 * 60 * 24 * 7 }, // 7 days in ms
   store: new MongoStore({ mongooseConnection: mongoose.connection, ttl: 60 * 60 * 24 * 7 })
